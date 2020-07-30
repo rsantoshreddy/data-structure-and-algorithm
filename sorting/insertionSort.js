@@ -11,3 +11,21 @@ const insertionSort = (array = []) => {
     }
     return array;
 }
+
+const insertionSortCustom = function (cb) {
+    for (let i = 1; i < this.length; i++) {
+        const temp = this[i];
+        let j = i - 1;
+        while (j >= 0 && cb(this[j], temp)) {
+            this[j + 1] = this[j];
+            j--;
+        }
+        this[j + 1] = temp;
+    }
+    return this;
+}
+
+Array.prototype.insertionSortCustom = insertionSortCustom;
+
+module.exports = insertionSort;
+module.exports = insertionSortCustom;
