@@ -1,4 +1,6 @@
-﻿const selectionSort = (array) => {
+﻿// worst case time complexity O(n^2)
+
+const selectionSort = (array) => {
     for (let i = 0; i < array.length; i++) {
 
         let min = i;

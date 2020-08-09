@@ -77,3 +77,26 @@ const quickSortProto = function (left = 0, right = this.length - 1) {
 // const d = [3, 10, 1, 5, 6, 10, 11, 10, -1];
 // console.log(d.quickSort());
 
+var qs = function (left = 0, right = this.length - 1) {
+    if (right <= left) { return; }
+
+    var i = left;
+    var j = right - 1;
+    var pivot = this[right];
+
+    while (true) {
+        while (this[i] < pivot) { i++; }
+        while (j > 0 && this[j] >= pivot) { j--; }
+        if (i >= j) {
+            break;
+        } else {
+            [this[i], this[j]] = [this[j], this[i]]
+        }
+    }
+    [this[i], this[right]] = [this[right], this[i]];
+
+    this.qs(left, i - 1);
+    this.qs(i + 1, right);
+
+    return this;
+}
