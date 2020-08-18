@@ -8,10 +8,23 @@
 </head>
 
 <body>
-    <script src="./maxSubArray/divideAndConcure.js"></script>
+    <button id='root'>Click me</button>
+    <!-- <script src="./maxSubArray/divideAndConcure.js"></script> -->
     <Script>
-        var d = [-2, -3, 4, -1, -2, 1, 5, -3];
-        console.log(findMaxSumSubArray(d));
+        // var d = [-2, -3, 4, -1, -2, 1, 5, -3];
+        // console.log(findMaxSumSubArray(d));
+
+        class ListnerClass {
+            constructor() {
+                const ele = document.getElementById('root');
+                ele.addEventListener('click', this);
+
+            }
+            handleEvent(e) {
+                console.log(e)
+            }
+        }
+        const l = new ListnerClass();
     </Script>
 </body>
 

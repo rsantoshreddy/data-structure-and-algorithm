@@ -1,4 +1,4 @@
-﻿const performanceChecker = require('../performanceChecker');
+﻿const performanceChecker = require('../../performanceChecker');
 const findMaxSumSubArray = require('./divideAndConquer');
 const kadansMaxSumSubArray = require('./kadansMaxSumSubArray');
 
